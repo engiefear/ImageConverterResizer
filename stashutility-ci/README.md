@@ -1,1 +1,0 @@
-Temporary CI harness used to build a customized StashUtility plugin for GameHelper2. This directory can be removed after the build artifact is produced.
