@@ -1,0 +1,156 @@
+{
+  "Schema": "stashutility.tablets.v1",
+  "Name": "Top Tablets - modifier presence only",
+  "Description": "Curated PoE2 0.5.5 tablet profiles. No minimum-roll requirements: a modifier qualifies at any roll. GOD = highest-value/most-targeted mods, GOOD = strong supporting mods.",
+  "CreatedUtc": "2026-11-03T00:00:00Z",
+  "Profiles": {
+    "Breach Tablet": {
+      "GoodModPatterns": [
+        "TowerBreachHivebloodQuantity",
+        "TowerBreachWombgiftQuantity",
+        "TowerBreachMonsterQuantity",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerPackSizeIncrease",
+        "TowerMonsterEffectiveness"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerBreachAdditionalRares",
+        "TowerBreachWombgiftLevelChance"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Expedition Tablet": {
+      "GoodModPatterns": [
+        "TowerExpeditionIncreasedVerisium",
+        "TowerExpeditionRareMonsters",
+        "TowerExpeditionRunicMonsters",
+        "TowerExpeditionRelicIncrease",
+        "TowerExpedition2RunicModPassoverChance",
+        "TowerExpeditionRelicModEffect",
+        "TowerExpeditionChanceForTwinnedElites",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerMonsterEffectiveness"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerExpeditionChanceForVerisiumRemnant"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Delirium Tablet": {
+      "GoodModPatterns": [
+        "TowerDeliriumAdditionalShardsChance",
+        "TowerDeliriumPackSizeIncrease",
+        "TowerDeliriumFogPersistence",
+        "TowerDeliriumRareMonsterPause",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerPackSizeIncrease"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerDeliriumMonsterSplinterIncrease",
+        "TowerDeliriumDoodadsIncrease"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Ritual Tablet": {
+      "GoodModPatterns": [
+        "TowerRitualTributeIncrease",
+        "TowerRitualRerollCostIncrease",
+        "TowerRitualDeferCostIncrease",
+        "TowerRitualChanceForNoCost",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerPackSizeIncrease"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerRitualOmenChance",
+        "TowerRitualAdditionalReroll"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Irradiated Tablet": {
+      "GoodModPatterns": [
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerPackSizeIncrease",
+        "TowerMonsterEffectiveness",
+        "TowerMagicPackIncrease"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerRarePackIncrease"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Overseer Tablet": {
+      "GoodModPatterns": [
+        "TowerMapBossWaystoneChance",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerMonsterEffectiveness"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerMapBossQuantity",
+        "TowerMapBossRarity"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Abyss Tablet": {
+      "GoodModPatterns": [
+        "TowerAbyssAdditionalChance",
+        "TowerAbyss4AdditionalChance",
+        "TowerAbyssIncreasedRewards",
+        "TowerAbyssExtraModifiers",
+        "TowerAbyssMonsterIncrease",
+        "TowerAbyssDepthsChance",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerAbyssExtraTickets",
+        "TowerAbyssEnhancedMonstersPerChasm",
+        "TowerAbyssRareMonsterIncrease"
+      ],
+      "ModRequiredMinRolls": {}
+    },
+    "Temple Tablet": {
+      "GoodModPatterns": [
+        "TowerIncursionSecondaryEncounters",
+        "TowerIncursionBossChance",
+        "TowerIncursionRareChestChance",
+        "TowerRarePackIncrease",
+        "TowerMonsterRarityIncrease",
+        "TowerDroppedItemRarityIncrease",
+        "TowerPackSizeIncrease"
+      ],
+      "BadModPatterns": [],
+      "GodModPatterns": [
+        "TowerMapAdditionalModifier",
+        "TowerIncursionTokenChance",
+        "TowerIncursionExtraPacks"
+      ],
+      "ModRequiredMinRolls": {}
+    }
+  }
+}
