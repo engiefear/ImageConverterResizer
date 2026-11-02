@@ -1,0 +1,15 @@
+{
+  "Schema": "stashutility.tablet-rules.v2",
+  "Name": "Current Tablet Profiles",
+  "Description": "Current Forbidden Rites tablet profiles. Modifier presence only; no minimum roll thresholds.",
+  "Profiles": [
+    {"Name":"Expedition — Profit","TabletType":"Expedition Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerExpeditionLogbookIncrease","TowerExpeditionRareMonsters","TowerExpeditionRelicModEffect","TowerExpeditionRunicMonsters","TowerExpeditionRelicIncrease","TowerExpeditionArtifactIncrease"],"MinAnyModMatches":1},
+    {"Name":"Ritual — Omens & Rerolls","TabletType":"Ritual Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerRitualOmenChance","TowerRitualAdditionalReroll","TowerRitualTributeIncrease","TowerRitualChanceForNoCost","TowerRitualMagicMonsters"],"MinAnyModMatches":1},
+    {"Name":"Abyss — Desecrated","TabletType":"Abyss Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerAbyssExtraTickets","TowerAbyssRareMonsterIncrease","TowerAbyssIncreasedRewards","TowerAbyssEnhancedMonstersPerChasm","TowerAbyssAdditionalChance","TowerAbyss4AdditionalChance"],"MinAnyModMatches":1},
+    {"Name":"Delirium — Simulacrum","TabletType":"Delirium Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerDeliriumMonsterSplinterIncrease","TowerDeliriumDoodadsIncrease","TowerDeliriumPackSizeIncrease","TowerDeliriumAdditionalShardsChance","TowerDeliriumRareMonsterPause"],"MinAnyModMatches":1},
+    {"Name":"Breach — Wombgifts & Rares","TabletType":"Breach Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerBreachWombgiftLevelChance","TowerBreachWombgiftQuantity","TowerBreachHivebloodQuantity","TowerBreachAdditionalRares","TowerBreachBossChance","TowerBreachMonsterQuantity"],"MinAnyModMatches":1},
+    {"Name":"Temple — Crystals","TabletType":"Temple Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerIncursionTokenChance","TowerIncursionExtraPacks","TowerIncursionExtraPacksChance","TowerIncursionRareChestChance","TowerIncursionBossChance"],"MinAnyModMatches":1},
+    {"Name":"Overseer — Boss Loot","TabletType":"Overseer Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerMapBossQuantity","TowerMapBossRarity","TowerMapBossWaystoneChance","TowerMapBossAdditionalStrongbox","TowerAdditionalEssence"],"MinAnyModMatches":1},
+    {"Name":"Irradiated — Juice","TabletType":"Irradiated Tablet","RequireAnyModIds":["TowerMapAdditionalModifier","TowerRarePackIncrease","TowerMonsterRarityIncrease","TowerDroppedItemRarityIncrease","TowerPackSizeIncrease","TowerMonsterEffectiveness","TowerMagicPackIncrease"],"MinAnyModMatches":1}
+  ]
+}
