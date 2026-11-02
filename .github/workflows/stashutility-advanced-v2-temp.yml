@@ -1,0 +1,66 @@
+name: Temporary StashUtility Advanced v2 build
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout advanced build harness
+        uses: actions/checkout@v4
+        with:
+          ref: stashutility-advanced-build
+          path: harness
+
+      - name: Checkout GameHelper2
+        uses: actions/checkout@v4
+        with:
+          repository: AlexanderHel/GameHelper2
+          path: GameHelper2
+
+      - name: Checkout current StashUtility
+        uses: actions/checkout@v4
+        with:
+          repository: AlexanderHel/StashUtility
+          path: GameHelper2/Plugins/StashUtility
+
+      - name: Apply profile-engine patch
+        run: python3 harness/stashutility-ci/apply_profile_patch.py
+
+      - name: Apply v2 UI/tablet patch
+        run: python3 harness/stashutility-ci/apply_v2_ui_and_tablets.py
+
+      - name: Apply distinct Advanced identity
+        run: python3 harness/stashutility-ci/advanced_finalize.py
+
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build
+        run: dotnet build GameHelper2/Plugins/StashUtility/StashUtility.csproj -c Release
+
+      - name: Package plugin
+        run: |
+          mkdir -p artifact/StashUtility_Advanced/profiles/waystones artifact/StashUtility_Advanced/profiles/tablets artifact/StashUtility_Advanced/profiles/jewels
+          cp GameHelper2/Plugins/StashUtility/bin/Release/net10.0-windows/win-x64/StashUtility_Advanced.dll artifact/StashUtility_Advanced/
+          cp GameHelper2/Plugins/StashUtility/bin/Release/net10.0-windows/win-x64/StashUtility_Advanced.pdb artifact/StashUtility_Advanced/ || true
+          cp -r GameHelper2/Plugins/StashUtility/Data artifact/StashUtility_Advanced/ || true
+          cp -r GameHelper2/Plugins/StashUtility/Localization artifact/StashUtility_Advanced/ || true
+          cp harness/stashutility-ci/Top_Tablets_MinRolls.json artifact/StashUtility_Advanced/profiles/tablets/
+          printf '%s\n' 'StashUtility Advanced v2 - separated UI + tablet profile import' > artifact/StashUtility_Advanced/PROFILE_BUILD.txt
+          cd artifact && zip -r ../StashUtility_Advanced_v2.zip StashUtility_Advanced
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: StashUtility_Advanced_v2
+          path: StashUtility_Advanced_v2.zip
+          if-no-files-found: error
